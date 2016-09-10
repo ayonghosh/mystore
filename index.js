@@ -143,7 +143,7 @@ app.post('/api/checkout', function (req, res) {
 	res.send({ orderId: orderId });
 });
 
-var port = 3000;
+var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 // Finally starting the listener
 app.listen(port, function () {
