@@ -144,8 +144,9 @@ app.post('/api/checkout', function (req, res) {
 });
 
 var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var ip = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 
 // Finally starting the listener
-app.listen(port, function () {
+app.listen(port, ip, function () {
   console.log('Listening on port '+ port);
 });
