@@ -1,0 +1,28 @@
+<section id="checkout-page">
+	<div class="title">
+		Checkout
+	</div>
+	<div class="subtitle">Please select an address:</div>
+	<div class="addr-ctr">
+		<% _.each(addresses, function (address) { %>
+			<div class="addr" data-id="<%= address.id %>">
+				<div>
+					<label>Name</label>
+					<span><%= address.name %></span>
+				</div>
+				<div>
+					<label>Address</label>
+					<span><%= address.address %></span>
+				</div>
+				<div>
+					<label>City</label>
+					<span><%= address.city %></span>
+				</div>
+				<div>
+					<label>Zip</label>
+					<span><%= address.zip %></span>
+				</div>
+			</div>
+		<% }) %>
+	</div>
+</section>
