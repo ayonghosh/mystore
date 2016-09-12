@@ -1,57 +1,57 @@
 <section id="cart-page">
-	<div class="title">
-		Your Shopping Cart
-	</div>
-	<% if (items.length === 0) { %>
-		<div class="cart-contents">
-			No items have been added.
-			<div>
-				<a href="#/list" class="continue-btn">Continue Shopping</a>
-			</div>
-		</div>
-	<% } else { %>
-		<div class="cart-contents">
-			<table>
-				<thead>
-					<th>Item</th>
-					<th></th>
-					<th>Price</th>
-					<th>Quantity</th>
-					<th>Total</th>
-					<th></th>
-				</thead>
-				<tbody>
-					<% var totalPrice = 0 %>
-					<% _.each(items, function (item) { %>
-						<tr>
-							<td>
-								<div class="image <%= item.imageClass %>"></div>
-							</td> 
-							<td class="desc">
-								<div class="item-title"><%= item.title %></div>
-								<div class="subtitle"><%= item.desc %></div>
-							</td>
-							<td class="price">INR <%= item.price %></td>
-							<td class="quantity">
-								<input type="number" name="quantity" min="1" max="10" step="1" value="<%= item.quantity %>" data-id="<%= item.id %>">
-							</td>
-							<td class="total">INR <%= item.price * item.quantity %></td>
-							<td class="remove">
-								<button class="delete" data-id="<%= item.id %>"></button>
-							</td>
-						</tr>
-						<% totalPrice += (item.price * item.quantity) %>
-					<% }) %>
-				</tbody>
-			</table>
-		</div>
-		<div class="total-price">
-			Total Price: <%= totalPrice %>
-		</div>
-		<div class="checkout">
-			<a href="/#checkout" class="checkout-btn">
-				Proceed to Checkout
-			</a>
-		</div>
-	<% } %>
+  <div class="title">
+    Your Shopping Cart
+  </div>
+  <% if (items.length === 0) { %>
+    <div class="cart-contents">
+      No items have been added.
+      <div>
+        <a href="#/list" class="continue-btn">Continue Shopping</a>
+      </div>
+    </div>
+  <% } else { %>
+    <div class="cart-contents">
+      <table>
+        <thead>
+          <th>Item</th>
+          <th></th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <% var totalPrice = 0 %>
+          <% _.each(items, function (item) { %>
+            <tr>
+              <td>
+                <div class="image <%= item.imageClass %>"></div>
+              </td> 
+              <td class="desc">
+                <div class="item-title"><%= item.title %></div>
+                <div class="subtitle"><%= item.desc %></div>
+              </td>
+              <td class="price">INR <%= item.price %></td>
+              <td class="quantity">
+                <input type="number" name="quantity" min="1" max="10" step="1" value="<%= item.quantity %>" data-id="<%= item.id %>">
+              </td>
+              <td class="total">INR <%= item.price * item.quantity %></td>
+              <td class="remove">
+                <button class="delete" data-id="<%= item.id %>"></button>
+              </td>
+            </tr>
+            <% totalPrice += (item.price * item.quantity) %>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <div class="total-price">
+      Total Price: <%= totalPrice %>
+    </div>
+    <div class="checkout">
+      <a href="/#checkout" class="checkout-btn">
+        Proceed to Checkout
+      </a>
+    </div>
+  <% } %>
 </section>

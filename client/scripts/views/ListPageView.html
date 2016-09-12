@@ -1,13 +1,13 @@
 <section id="list-page">
-	<% _.each(items, function (item) { %>
-		<div class="item">
-			<div class="image <%= item.imageClass %>"></div>
-			<div class="desc">
-				<div class="item-title"><%= item.title %></div>
-				<div class="subtitle"><%= item.desc %></div>
-				<div class="price">INR <%= item.price %></div>
-				<button class="buy" data-id="<%= item.id %>">ADD TO CART</button>
-			</div>
-		</div>
-	<% }) %>
+  <% _.each(items, function (item) { %>
+    <div class="item">
+      <div class="image <%= item.imageClass %>"></div>
+      <div class="desc">
+        <div class="item-title"><%= item.title %></div>
+        <div class="subtitle"><%= item.desc %></div>
+        <div class="price">INR <%= item.price %></div>
+        <button class="buy" data-id="<%= item.id %>">ADD TO CART</button>
+      </div>
+    </div>
+  <% }) %>
 </section>

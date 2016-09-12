@@ -1,20 +1,20 @@
 <section class="login">
-	<% if (isLoggedIn) { %>
-		<div>
-			<button class="login-btn logout-action">Sign Out</button>
-		</div>
-	<% } else { %>
-		<div>
-			<label>Username</label>
-			<input type="text" id="username">
-		</div>
-		<div>
-			<label>Password</label>
-			<input type="password" id="password">
-		</div>
-		<div>
-			<button class="login-btn login-action">Sign In</button>
-		</div>
-		<div class="error-msg"></div>
-	<% } %>	
+  <% if (isLoggedIn) { %>
+    <div>
+      <button class="login-btn logout-action">Sign Out</button>
+    </div>
+  <% } else { %>
+    <div>
+      <label>Username</label>
+      <input type="text" id="username">
+    </div>
+    <div>
+      <label>Password</label>
+      <input type="password" id="password">
+    </div>
+    <div>
+      <button class="login-btn login-action">Sign In</button>
+    </div>
+    <div class="error-msg"></div>
+  <% } %> 
 </section>
